@@ -1,2 +1,2 @@
-# Cmake-guide-tutorial-solutinons
+# Cmake guide tutorial solutinons
 Solutions for step by step Cmake tutorial
