@@ -1,5 +1,7 @@
 `mkdir Step1_build`
+
 `cd Step1_build`
+
 `cmake ../Step1`
 
 ```
