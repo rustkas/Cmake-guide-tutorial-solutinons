@@ -1,7 +1,7 @@
 # TODO 1: Set the minimum required version of CMake to be 3.10
 cmake_minimum_required(VERSION 3.10)
 # TODO 2: Create a project named Tutorial
-project(Tutorial)
+project(Tutorial VERSION 1.0)
 
 # TODO 7: Set the project version number as 1.0 in the above project command
 
@@ -19,5 +19,7 @@ add_executable(Tutorial tutorial.cxx)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+configure_file(TutorialConfig.h.in TutorialConfig.h)
 
 # TODO 9: Use target_include_directories to include ${PROJECT_BINARY_DIR}
+target_include_directories(Tutorial PUBLIC "${PROJECT_BINARY_DIR}")
