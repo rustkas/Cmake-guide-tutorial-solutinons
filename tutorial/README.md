@@ -16,3 +16,7 @@ Tutorial 4294967296
 Tutorial 10
 Tutorial
 ```
+
+`cmake .. -DUSE_MYMATH=OFF`
+
+`cmake --build .`
