@@ -1,5 +1,5 @@
 # TODO 1: Set the minimum required version of CMake to be 3.10
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.15)
 # TODO 2: Create a project named Tutorial
 project(Tutorial VERSION 1.0)
 
@@ -17,6 +17,13 @@ add_executable(Tutorial tutorial.cxx)
 
 add_library(tutorial_compiler_flags INTERFACE)
 target_compile_features(tutorial_compiler_flags INTERFACE cxx_std_11)
+
+set(gcc_like_cxx "$<COMPILE_LANG_AND_ID:CXX,ARMClang,AppleClang,Clang,GNU,LCC>")
+set(msvc_cxx "$<COMPILE_LANG_AND_ID:CXX,MSVC>")
+target_compile_options(tutorial_compiler_flags INTERFACE
+  "$<${gcc_like_cxx}:$<BUILD_INTERFACE:-Wall;-Wextra;-Wshadow;-Wformat=2;-Wunused>>"
+  "$<${msvc_cxx}:$<BUILD_INTERFACE:-W3>>"
+)
 
 configure_file(TutorialConfig.h.in TutorialConfig.h)
 
