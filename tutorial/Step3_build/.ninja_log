@@ -1,0 +1,8 @@
+# ninja log v6
+1	128	7434981131955954	MathFunctions/CMakeFiles/MathFunctions.dir/MathFunctions.cxx.obj	f11aa0ea8ef5c058
+18	1185	7434981132126131	MathFunctions/CMakeFiles/SqrtLibrary.dir/mysqrt.cxx.obj	2e636db9a4874a8d
+5	1197	7434981131985961	MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.obj	b26d4493ab8f81b0
+59	390	7434982776017500	MathFunctions/libMathFunctions.a	842ffd2baad10cd1
+75	391	7434982776302197	MathFunctions/libSqrtLibrary.a	e2c9112b9a497fa0
+39	699	7434982775872428	CMakeFiles/Tutorial.dir/tutorial.cxx.obj	3cbc3a22faaf0106
+700	822	7434982782402096	Tutorial.exe	8107875d78b357ff
